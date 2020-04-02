@@ -12,11 +12,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r}
+```{r warning=FALSE}
 library(ggplot2)
 ```
 
-##### Histogram
+#### Histogram
 
 R data "cars" will be used for this plot
 
