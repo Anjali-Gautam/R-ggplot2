@@ -1,0 +1,28 @@
+---
+title: "Visualization with ggplot2"
+author: "By: Anjali Gautam"
+output: html_notebook
+---
+Below are codes and guide on how to create visualizations in R package ggplot2. I will use R datasets to create these visualizations. This guide will be updated as new visualizations are discovered or existing updated
+
+```{r}
+library(ggplot2)
+```
+
+
+##### Histogram
+
+R data "cars" will be used for this plot
+
+```{r}
+data("cars")
+str(cars)
+```
+
+```{r}
+ggplot(cars,aes(speed, fill ="lightgreen"))+
+  geom_histogram(binwidth = 1)+
+  ggtitle("Histogram")
+```
+
+
