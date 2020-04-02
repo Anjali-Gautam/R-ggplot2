@@ -1,14 +1,20 @@
 ---
 title: "Visualization with ggplot2"
 author: "By: Anjali Gautam"
-output: html_notebook
+output: rmarkdown::github_document
 ---
-Below are codes and guide on how to create visualizations in R package ggplot2. I will use R datasets to create these visualizations. This guide will be updated as new visualizations are discovered or existing updated
+
+Below are codes to create basic visualizations in R package ggplot2. This is for someone who wants to start with ggplot2 or use it for basic purposes. I will use R datasets to create these visualizations and will update the code as new visualizations are discovered 
+
+```{r message=FALSE, warning=FALSE, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(
+  fig.path = "README_figs/README-"
+)
+```
 
 ```{r}
 library(ggplot2)
 ```
-
 
 ##### Histogram
 
@@ -20,9 +26,9 @@ str(cars)
 ```
 
 ```{r}
-ggplot(cars,aes(speed, fill ="lightgreen"))+
-  geom_histogram(binwidth = 1)+
+ggplot(cars,aes(speed))+
+  geom_histogram(binwidth = 1, fill="lightblue", color = "blue")+
+  labs(x="Speed", y = "Count of cars/Frequency")+
   ggtitle("Histogram")
 ```
-
 
