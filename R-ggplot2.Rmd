@@ -32,3 +32,22 @@ ggplot(cars,aes(speed))+
   ggtitle("Histogram")
 ```
 
+#### Line chart 
+
+R data "phones" will be used for this plot
+
+```{r}
+data("phones")
+head(phones)
+```
+
+I will plot weight of chicks with time 
+
+```{r}
+ggplot(data= as.data.frame(phones), aes(x=year, y = calls))+
+  geom_line(color="grey")+
+  geom_point(color="black")+
+  labs(y="no of calls")+
+  ggtitle("Line Chart")
+```
+
