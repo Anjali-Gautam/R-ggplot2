@@ -40,7 +40,7 @@ R data "Orange" will be used for this plot
 data("Orange")
 ```
 
-I will plot weight of chicks with time 
+I will plot circumference of tree with age 
 
 ```{r}
 ggplot(data= Orange, aes(x=age, y = circumference, color=Tree))+
