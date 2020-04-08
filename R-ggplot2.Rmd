@@ -34,20 +34,19 @@ ggplot(cars,aes(speed))+
 
 #### Line chart 
 
-R data "phones" will be used for this plot
+R data "Orange" will be used for this plot
 
 ```{r}
-data("phones")
-head(phones)
+data("Orange")
 ```
 
 I will plot weight of chicks with time 
 
 ```{r}
-ggplot(data= as.data.frame(phones), aes(x=year, y = calls))+
-  geom_line(color="grey")+
-  geom_point(color="black")+
-  labs(y="no of calls")+
+ggplot(data= Orange, aes(x=age, y = circumference, color=Tree))+
+  geom_line()+
+  geom_point()+
+  labs(y="Circumference")+
   ggtitle("Line Chart")
 ```
 

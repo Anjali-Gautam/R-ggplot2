@@ -32,3 +32,23 @@ ggplot(cars,aes(speed))+
 ```
 
 ![](README_figs/README-unnamed-chunk-4-1.png)<!-- -->
+
+#### Line chart
+
+R data “Orange” will be used for this plot
+
+``` r
+data("Orange")
+```
+
+I will plot weight of chicks with time
+
+``` r
+ggplot(data= Orange, aes(x=age, y = circumference, color=Tree))+
+  geom_line()+
+  geom_point()+
+  labs(y="Circumference")+
+  ggtitle("Line Chart")
+```
+
+![](README_figs/README-unnamed-chunk-6-1.png)<!-- -->
